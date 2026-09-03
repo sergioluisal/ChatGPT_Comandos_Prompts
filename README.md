@@ -1,442 +1,279 @@
-#1. Como ler as colunas
+# Guia Prático de Utilização da Biblioteca de Prompts e Comandos
 
-Na aba “Biblioteca 200+”, você encontrará:
+---
 
-Coluna	O que significa
-Categoria	Área do comando: Excel, Python, Finanças, IA etc.
-Comando / palavra-chave	A palavra-chave que você pode colocar no seu prompt
-Para que serve	O objetivo daquele comando
-Exemplo pronto para copiar	Um exemplo de utilização
-Nível	Básico, intermediário ou avançado
-Combinações recomendadas	Outros comandos que funcionam bem junto com ele
-#2. O que significa “Combinações recomendadas”?
+## 1. Como Ler as Colunas
 
-Imagine que você encontre:
+Na aba **“Biblioteca 200+”**, você encontrará a seguinte estrutura:
 
-debug
+| Coluna | O que significa |
+| :--- | :--- |
+| **Categoria** | Área do comando: *Excel, Python, Finanças, IA*, etc. |
+| **Comando / Palavra-chave** | A palavra-chave que você pode colocar no seu prompt. |
+| **Para que serve** | O objetivo daquele comando. |
+| **Exemplo pronto para copiar** | Um exemplo prático de utilização. |
+| **Nível** | Básico, intermediário ou avançado. |
+| **Combinações recomendadas** | Outros comandos que funcionam bem em conjunto. |
 
-E na última coluna apareça:
+---
 
-explain-code; refactor; optimize; unit-test
+## 2. O que significa “Combinações Recomendadas”?
 
-Isso significa que você pode combinar:
+Imagine que você encontre a palavra-chave `debug`. Na última coluna, podem aparecer sugestões como:
 
-debug + explain-code + refactor + optimize + unit-test
+`explain-code` | `refactor` | `optimize` | `unit-test`
 
-Cada parte acrescenta uma função:
+Isso significa que você pode combinar múltiplos comandos:
+$$	ext{debug} + 	ext{explain-code} + 	ext{refactor} + 	ext{optimize} + 	ext{unit-test}$$
 
-debug → encontra os erros
-explain-code → explica os erros
-refactor → reorganiza o código
-optimize → melhora o desempenho
-unit-test → cria testes
-Resultado
+### Função de Cada Parte
 
-Em vez de pedir:
+* 🐞 **`debug`** → Encontra os erros
+* 💡 **`explain-code`** → Explica a causa dos erros
+* 🛠️ **`refactor`** → Reorganiza o código
+* ⚡ **`optimize`** → Melhora o desempenho
+* 🧪 **`unit-test`** → Cria testes para validação
 
-"Corrija meu código."
+---
 
-Você pode pedir:
+### Exemplo Comparativo
 
-debug + explain-code + refactor + optimize + unit-test
+> ❌ **Antes (Prompt genérico):**  
+> *"Corrija meu código."*
 
-Analise meu código Python.
+> ✅ **Depois (Prompt combinado):**  
+> **Comandos:** `debug + explain-code + refactor + optimize + unit-test`  
+> *"Analise meu código Python. Encontre os erros. Explique por que acontecem. Corrija os erros. Refatore o código. Otimize o desempenho. Crie testes para verificar a solução."*
 
-1. Encontre os erros.
-2. Explique por que acontecem.
-3. Corrija os erros.
-4. Refatore o código.
-5. Otimize o desempenho.
-6. Crie testes para verificar a solução.
+---
 
-Isso é muito mais poderoso.
+## 3. Como Combinar os Comandos
 
-#3. Como combinar os comandos
+A lógica de construção de um prompt poderoso segue este fluxo:
 
-Uma maneira simples de pensar é:
+```
+🎯 Comando principal (Define o QUE fazer)
+       ↓
+🔧 Comandos complementares (Definem COMO fazer)
+       ↓
+📋 Formato (Define como APRESENTAR o resultado)
+```
 
-🎯 Comando principal
+**Exemplo:**
+`EDA + statistics + visualization + key-points + table`
 
-Define o que você quer fazer.
+**Tradução prática:**
+> *"Analise os dados $
+ightarrow$ faça estatística $
+ightarrow$ sugira gráficos $
+ightarrow$ extraia os principais pontos $
+ightarrow$ apresente em tabela."*
 
-↓
+---
 
-🔧 Comandos complementares
+## 4. Exemplos Práticos por Área
 
-Definem como fazer.
+### 🐍 Python
 
-↓
+#### Exemplo 1: Debugging
+* **Combinação:** `debug + explain-code + refactor + optimize`
+* **Fluxo:** Encontrar $
+ightarrow$ Explicar $
+ightarrow$ Corrigir $
+ightarrow$ Melhorar
 
-📋 Formato
+#### Exemplo 2: Manipulação de Dados
+* **Combinação:** `pandas + data-cleaning + EDA + visualization`
+* **Fluxo:** Manipular $
+ightarrow$ Limpar $
+ightarrow$ Explorar $
+ightarrow$ Visualizar
 
-Define como apresentar o resultado.
-
-Por exemplo:
-
-EDA
-+
-statistics
-+
-visualization
-+
-key-points
-+
-table
-
-Pode virar:
-
-Analise os dados → faça estatística → sugira gráficos → extraia os principais pontos → apresente em tabela.
-
-#4. Exemplos práticos por área
-🐍 Python
-debug
-
-Combinações:
-
-debug + explain-code + refactor + optimize
-
-Significa:
-
-Encontrar → explicar → corrigir → melhorar
-
-pandas
-
-Combinações:
-
-pandas + data-cleaning + EDA + visualization
-
-Significa:
-
-Manipular → limpar → explorar → visualizar
-
-Exemplo:
-
+```text
 pandas + data-cleaning + EDA + visualization
 
 Analise meu DataFrame.
-
 Faça:
-1. limpeza dos dados;
-2. tratamento de valores ausentes;
-3. análise exploratória;
-4. identificação de outliers;
-5. gráficos relevantes;
-6. principais insights.
+1. Limpeza dos dados;
+2. Tratamento de valores ausentes;
+3. Análise exploratória;
+4. Identificação de outliers;
+5. Gráficos relevantes;
+6. Principais insights.
+```
 
-#5. 📊 Data Science
+---
 
-Uma combinação muito importante:
+### 📊 5. Data Science
 
-EDA + data-cleaning + statistics + visualization
+**Combinação essencial:** `EDA + data-cleaning + statistics + visualization`
 
-Pense assim:
+* 🔍 **`EDA`** $
+ightarrow$ Entender os dados
+* 🧹 **`data-cleaning`** $
+ightarrow$ Corrigir os dados
+* 📈 **`statistics`** $
+ightarrow$ Quantificar os padrões
+* 👁️ **`visualization`** $
+ightarrow$ Enxergar os padrões
 
-EDA
-↓
-entender os dados
+---
 
-data-cleaning
-↓
-corrigir os dados
+### 🤖 6. Machine Learning
 
-statistics
-↓
-quantificar os padrões
+Esta combinação estrutura um **pipeline completo de Machine Learning**:
 
-visualization
-↓
-enxergar os padrões
+```
+Dados ──> EDA ──> feature-engineering ──> model-selection ──> cross-validation ──> hyperparameter-tuning ──> model-evaluation ──> Modelo Final
+```
 
-Resultado
+* **Prompt:** `EDA + feature-engineering + model-selection + cross-validation + hyperparameter-tuning + model-evaluation`
 
-Você consegue construir uma análise exploratória bastante completa.
+---
 
-#6. 🤖 Machine Learning
+### 💰 7. Finanças
 
-Aqui as combinações ficam ainda mais interessantes.
+* **Combinação:** `financial-analysis + risk-return + compare + scenario-analysis`
+* **Objetivo:** Análise financeira $+$ Risco x Retorno $+$ Comparação $+$ Cenários
 
-EDA
-+
-feature-engineering
-+
-model-selection
-+
-cross-validation
-+
-hyperparameter-tuning
-+
-model-evaluation
+> ❌ **Pergunta simples:** *"Qual investimento é melhor?"*  
+> ✅ **Prompt Estruturado:**
+> 
+> ```text
+> financial-analysis + risk-return + compare + scenario-analysis
+> 
+> Compare CDB, LCI, LCA e Tesouro Selic.
+> Considere:
+> - Rentabilidade;
+> - Risco;
+> - Liquidez;
+> - Tributação;
+> - Prazo;
+> - Cenário otimista, base e pessimista.
+> 
+> Apresente uma tabela comparativa e explique a conclusão.
+> ```
 
-Isso representa praticamente um pipeline de Machine Learning:
+---
 
-Dados
+### 📚 8. Estudos
 
-↓
+Crie um **professor particular sob medida**:
 
-EDA
+* **Combinação:** `ELI5 + teach-me + analogy + examples + quiz`
 
-↓
+| Comando | Função |
+| :--- | :--- |
+| **`ELI5`** | Explica de maneira extremamente simples (*Like I'm 5*) |
+| **`teach-me`** | Ensina o conceito passo a passo |
+| **`analogy`** | Utiliza analogias do dia a dia |
+| **`examples`** | Fornece exemplos práticos e numéricos |
+| **`quiz`** | Testa o seu conhecimento ao final |
 
-feature-engineering
-
-↓
-
-model-selection
-
-↓
-
-cross-validation
-
-↓
-
-hyperparameter-tuning
-
-↓
-
-model-evaluation
-
-↓
-
-Modelo final
-
-#7. 💰 Finanças
-
-Por exemplo:
-
-financial-analysis + risk-return + compare + scenario-analysis
-
-Você está pedindo:
-
-análise financeira
-
-risco x retorno
-
-comparação
-
-cenários
-
-Isso é muito melhor do que simplesmente perguntar:
-
-"Qual investimento é melhor?"
-
-Você poderia escrever:
-
-financial-analysis + risk-return + compare + scenario-analysis
-
-Compare CDB, LCI, LCA e Tesouro Selic.
-
-Considere:
-- rentabilidade;
-- risco;
-- liquidez;
-- tributação;
-- prazo;
-- cenário otimista;
-- cenário base;
-- cenário pessimista.
-
-Apresente uma tabela comparativa e explique a conclusão.
-#8. 📚 Estudos
-
-Uma das minhas combinações favoritas:
-
-ELI5 + teach-me + analogy + examples + quiz
-
-Ela cria praticamente um professor particular.
-
-Funcionamento:
-
-ELI5
-→ explica de maneira simples
-
-teach-me
-→ ensina
-
-analogy
-→ usa analogias
-
-examples
-→ mostra exemplos
-
-quiz
-→ testa seu conhecimento
-
-Por exemplo:
-
+```text
 ELI5 + teach-me + analogy + examples + quiz
 
 Ensine regressão linear.
-
-Comece explicando de forma muito simples.
-Depois use uma analogia.
-Depois dê um exemplo numérico.
-Depois mostre um exemplo em Python.
+Comece explicando de forma muito simples. Depois use uma analogia.
+Depois dê um exemplo numérico. Depois mostre um exemplo em Python.
 Por fim, faça 5 perguntas para testar se eu entendi.
-#9. ✍️ Escrita
+```
 
-Uma combinação simples:
+---
 
-rewrite + professional + concise + proofread
+### ✍️ 9. Escrita
 
-Significa:
+Ideal para e-mails, relatórios e documentos profissionais.
 
-reescrever
+* **Combinação:** `rewrite + professional + concise + proofread`
+* **Objetivo:** Reescrever $
+ightarrow$ Profissionalizar $
+ightarrow$ Ser objetivo $
+ightarrow$ Revisar/Corrigir
 
-→ profissionalizar
+---
 
-→ deixar objetivo
+### 🔎 10. Pesquisa
 
-→ corrigir
+Ideal para investigações aprofundadas e acadêmicas.
 
-Excelente para e-mails, mensagens e documentos.
+* **Combinação:** `deep-research + primary-sources + fact-check + source-evaluation`
+* **Fluxo:** Pesquisar profundamente $
+ightarrow$ Buscar fontes primárias $
+ightarrow$ Verificar fatos $
+ightarrow$ Avaliar qualidade das fontes
 
-#10. 🔎 Pesquisa
+---
 
-Uma combinação poderosa:
+### 📊 11. Excel
 
-deep-research + primary-sources + fact-check + source-evaluation
+* **Combinação:** `excel-formula + debug-formula + formula-explanation`
 
-Significa:
-
-pesquisar profundamente
-
-↓
-
-buscar fontes primárias
-
-↓
-
-verificar fatos
-
-↓
-
-avaliar a qualidade das fontes
-
-É uma combinação muito melhor para pesquisas importantes do que simplesmente:
-
-"Pesquise sobre X."
-
-#11. 📊 Excel
-
-Uma combinação interessante:
-
-excel-formula + debug-formula + formula-explanation
-
-Você pode pedir:
-
+```text
 excel-formula + debug-formula + formula-explanation
 
 Preciso calcular o rendimento de um investimento.
-
-Crie a fórmula.
-Depois verifique se existe algum erro.
+Crie a fórmula. Depois verifique se existe algum erro.
 Por fim, explique a fórmula parte por parte.
-#12. 🧠 Mind-map
+```
 
-O mind-map também pode ser combinado.
+---
 
-Por exemplo:
+### 🧠 12. Mapa Mental (Mind-map)
 
-mind-map + hierarchy + examples
+Estruture conteúdos visualmente para estudo ou apresentações.
 
-Para estudar:
+* **Combinação:** `mind-map + teach-me + examples`
 
+```text
 mind-map + teach-me + examples
 
 Crie um mapa mental sobre Machine Learning.
-
 Organize em:
-- conceito;
-- tipos;
-- algoritmos;
-- treinamento;
-- validação;
-- métricas;
-- aplicações.
+- Conceito;
+- Tipos;
+- Algoritmos;
+- Treinamento;
+- Validação;
+- Métricas;
+- Aplicações.
 
 Explique cada ramo e dê exemplos.
-#13. 🔥 A combinação mais importante: objetivo + método + formato
+```
 
-Eu recomendo você começar a pensar nos prompts desta maneira:
+---
 
-① O QUE?
-analyze-data
-② COMO?
-step-by-step
-③ COM QUAL PROFUNDIDADE?
-detailed
-④ COMO APRESENTAR?
-table
+## 13. 🔥 A Combinação Mais Importante
 
-Então:
+A estrutura de sucesso para qualquer prompt é:
 
-analyze-data + step-by-step + detailed + table
+$$\mathbf{Objetivo} + \mathbf{Método} + \mathbf{Profundidade} + \mathbf{Formato}$$
 
-E você pode escrever:
+1. **O QUE?** $
+ightarrow$ `analyze-data`
+2. **COMO?** $
+ightarrow$ `step-by-step`
+3. **PROFUNDIDADE?** $
+ightarrow$ `detailed`
+4. **APRESENTAÇÃO?** $
+ightarrow$ `table`
 
+```text
 analyze-data + step-by-step + detailed + table
 
 Analise meu dataset.
+Explique o processo passo a passo, seja detalhado e apresente os principais resultados em tabelas.
+```
 
-Explique o processo passo a passo,
-seja detalhado e apresente os principais resultados
-em tabelas.
-⭐ Uma “fórmula” para criar seus próprios prompts
+---
 
-Use:
+## ⭐ Fórmula Geral para Criar Seus Próprios Prompts
 
-[OBJETIVO]
-+
-[MÉTODO]
-+
-[PROFUNDIDADE]
-+
-[VALIDAÇÃO]
-+
-[FORMATO]
-Exemplo para seu trabalho com Data Science:
-EDA
-+
-statistics
-+
-visualization
-+
-fact-check
-+
-table
-Exemplo para Python:
-debug
-+
-explain-code
-+
-refactor
-+
-optimize
-+
-unit-test
-+
-code-block
-Exemplo para investimentos:
-financial-analysis
-+
-risk-return
-+
-compare
-+
-scenario-analysis
-+
-sensitivity-analysis
-+
-table
-Exemplo para estudar:
-ELI5
-+
-teach-me
-+
-step-by-step
-+
-analogy
-+
-examples
-+
-quiz
+$$	ext{[OBJETIVO]} + 	ext{[MÉTODO]} + 	ext{[PROFUNDIDADE]} + 	ext{[VALIDAÇÃO]} + 	ext{[FORMATO]}$$
+
+### Exemplos Práticos por Domínio
+
+* **Data Science:** `EDA + statistics + visualization + fact-check + table`
+* **Desenvolvimento Python:** `debug + explain-code + refactor + optimize + unit-test + code-block`
+* **Investimentos & Finanças:** `financial-analysis + risk-return + compare + scenario-analysis + sensitivity-analysis + table`
+* **Estudos & Aprendizado:** `ELI5 + teach-me + step-by-step + analogy + examples + quiz`
